@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="appContainer">
+    <page-header></page-header>
+
+    <div class="appOutlet">
+      <quote-gen></quote-gen>
+      <router-view></router-view>
+
+      <home-page></home-page>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import QuoteGen from "./components/body/QuoteGen.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    QuoteGen
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap");
+.appContainer {
+  // background-color: rgb(214, 212, 212);
+  // height: 100vh;
+}
+.appOutlet {
+  padding: 0 10%;
+}
+h1 {
+  // font-family: "Roboto" sans-serif;
+  // font-weight: 500;
+}
+
+p {
+  font-family: "Roboto" sans-serif;
+}
+template {
+  margin: 0;
+}
+.appContainer {
+  margin: 0;
 }
 </style>
